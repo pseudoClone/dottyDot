@@ -9,7 +9,7 @@
  '(fringe-mode 0 nil (fringe))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(magit yasnippet yasnippet-snippets yasnippet use-package vterm vertico))
+   '(yasnippet yasnippet-snippets yasnippet use-package vterm vertico))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))
