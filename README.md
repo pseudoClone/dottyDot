@@ -2,4 +2,3 @@
 
 - Yeah, JK.
 - Didnot put .zshrc because $0 should always be BASH
-- Hello Abinawan
