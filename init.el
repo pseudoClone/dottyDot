@@ -9,7 +9,7 @@
  '(fringe-mode 0 nil (fringe))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(yasnippet yasnippet-snippets yasnippet use-package vterm vertico))
+   '(yasnippet yasnippet-snippets yasnippet use-package vertico))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))
@@ -58,9 +58,6 @@
 
 (setq-default cursor-type 'bar)
 
-
-(use-package vterm
-    :ensure t)
 
 
 (electric-pair-mode 1)
