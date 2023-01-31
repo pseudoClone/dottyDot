@@ -9,7 +9,7 @@
  '(fringe-mode 0 nil (fringe))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(yasnippet yasnippet-snippets yasnippet use-package vertico))
+   '(php-mode magit powerline yasnippet yasnippet-snippets yasnippet use-package vertico))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))
@@ -22,6 +22,10 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq inhibit-startup-screen t)
 (setq auto-save-default nil)
+
+(global-visual-line-mode t)
+
+
 
 (global-set-key (kbd "C-<tab>") 'next-buffer)
 (global-set-key (kbd "C-<iso-lefttab>") 'previous-buffer)
@@ -47,6 +51,7 @@
 (setq make-backup-files nil)
 
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;;Company-mode config
 ;; (use-package company
@@ -56,7 +61,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(setq-default cursor-type 'bar)
+
+(require 'powerline)
+(powerline-center-theme)
 
 
 
@@ -75,3 +82,29 @@
 (yas-global-mode 1)
 
 
+(global-set-key (kbd "C-c <left>")  'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
+(global-set-key (kbd "C-c <down>")  'windmove-down)
+
+
+
+;; Magit
+(setq magit-status-buffer-switch-function 'switch-to-buffer)
+
+
+
+;; Linus Humor Mode
+(defun linux-c-mode ()
+"C mode with adjusted defaults for use with the Linux
+kernel."
+(interactive)
+(c-mode)
+(setq c-indent-level 8)
+(setq c-brace-imaginary-offset 0)
+(setq c-brace-offset -8)
+(setq c-argdecl-indent 8)
+(setq c-label-offset -8)
+(setq c-continued-statement-offset 8)
+(setq indent-tabs-mode nil)
+(setq tab-width 8))
