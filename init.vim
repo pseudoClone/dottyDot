@@ -8,6 +8,7 @@ call plug#begin()
 Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
 Plug 'vimwiki/vimwiki'
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 
@@ -32,6 +33,13 @@ set splitbelow                  " Open new windows below the current window.
 set splitright                  " Open new windows right of the current window.
 set wrapscan                    " Searches wrap around end-of-file.
 set mouse=                      " Disable Mouse
+
+
+
+let mapleader = "." " map leader to dot
+map <leader>cp <plug>NERDCommenterAppend
+
+
 
 "VimWiki
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
