@@ -9,7 +9,7 @@
  '(fringe-mode 0 nil (fringe))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(php-mode magit powerline yasnippet yasnippet-snippets yasnippet use-package vertico))
+   '(dirvish php-mode magit powerline yasnippet yasnippet-snippets yasnippet use-package vertico))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))
@@ -24,6 +24,9 @@
 (setq auto-save-default nil)
 
 (global-visual-line-mode t)
+
+(require 'dirvish)
+(dirvish-override-dired-mode)
 
 
 
