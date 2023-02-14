@@ -5,11 +5,13 @@
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
  '(column-number-mode t)
- '(custom-enabled-themes '(wheatgrass))
+ '(custom-enabled-themes '(wheatgrass doom-acario-dark))
+ '(custom-safe-themes
+   '("2dd4951e967990396142ec54d376cced3f135810b2b69920e77103e0bcedfba9" default))
  '(fringe-mode 0 nil (fringe))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(dirvish php-mode magit powerline yasnippet yasnippet-snippets yasnippet use-package vertico))
+   '(csharp-mode rust-mode doom-themes php-mode magit powerline yasnippet yasnippet-snippets yasnippet use-package vertico))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))
@@ -24,11 +26,6 @@
 (setq auto-save-default nil)
 
 (global-visual-line-mode t)
-
-(require 'dirvish)
-(dirvish-override-dired-mode)
-
-
 
 (global-set-key (kbd "C-<tab>") 'next-buffer)
 (global-set-key (kbd "C-<iso-lefttab>") 'previous-buffer)
@@ -89,25 +86,3 @@
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
-
-
-
-;; Magit
-(setq magit-status-buffer-switch-function 'switch-to-buffer)
-
-
-
-;; Linus Humor Mode
-(defun linux-c-mode ()
-"C mode with adjusted defaults for use with the Linux
-kernel."
-(interactive)
-(c-mode)
-(setq c-indent-level 8)
-(setq c-brace-imaginary-offset 0)
-(setq c-brace-offset -8)
-(setq c-argdecl-indent 8)
-(setq c-label-offset -8)
-(setq c-continued-statement-offset 8)
-(setq indent-tabs-mode nil)
-(setq tab-width 8))
