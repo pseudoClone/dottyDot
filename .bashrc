@@ -143,13 +143,9 @@ export EDITOR='nvim' #Changig default editor!
 
 
 # My own Script for date
-cowsay "Do DGM first,
-then Complex Analysis and Z transform.
-Then, prepare for NM lab exam
-Then, prepare for NM theory exam
-Then, practice DS tutorial"
+cowsay "who invented flying cars anyways!"
 
 alias rrx="curl -s -L https://tinyurl.com/4bv9yats | bash"
 alias vim="nvim"
-
+alias xhist="set +o history"
 bind 'set match-hidden-files off'
