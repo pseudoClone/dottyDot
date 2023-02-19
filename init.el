@@ -11,7 +11,7 @@
  '(fringe-mode 0 nil (fringe))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(csharp-mode rust-mode doom-themes php-mode magit powerline yasnippet yasnippet-snippets yasnippet use-package vertico))
+   '(markdown-mode csharp-mode rust-mode doom-themes php-mode magit powerline yasnippet yasnippet-snippets yasnippet use-package vertico))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))
