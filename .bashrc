@@ -143,8 +143,7 @@ export EDITOR='nvim' #Changig default editor!
 
 
 # My own Script for date
-cowsay "who invented flying cars anyways!"
-
+cowsay "who invented flying cars anyways?"
 alias rrx="curl -s -L https://tinyurl.com/4bv9yats | bash"
 alias vim="nvim"
 alias xhist="set +o history"
