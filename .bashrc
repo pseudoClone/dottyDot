@@ -138,7 +138,7 @@ ex ()
 HISTSIZE=200000 #Custom History Change
 HISTFILESIZE=200000 #Custom History filesize change
 
-export EDITOR='nvim' #Changig default editor!
+export EDITOR='/usr/bin/nvim' #Changig default editor!
 
 
 
@@ -146,5 +146,7 @@ export EDITOR='nvim' #Changig default editor!
 cowsay "who invented flying cars anyways?"
 alias rrx="curl -s -L https://tinyurl.com/4bv9yats | bash"
 alias vim="nvim"
+alias enw='emacs -nw'
 alias xhist="set +o history"
 bind 'set match-hidden-files off'
+alias bvi="busybox vi"

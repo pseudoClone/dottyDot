@@ -1,0 +1,2 @@
+gcc prp.c -o gl -lGL -lGLU -lGLEW -lglfw -lglut //Compilation using glew GL Glu 
+						glfw and glut
