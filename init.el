@@ -6,11 +6,11 @@
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
  '(column-number-mode t)
- '(custom-enabled-themes '(wheatgrass))
+ '(custom-enabled-themes '(modus-vivendi))
  '(fringe-mode 0 nil (fringe))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(markdown-mode csharp-mode rust-mode doom-themes php-mode magit powerline yasnippet yasnippet-snippets yasnippet use-package vertico))
+   '(dumb-jump web-mode tree-sitter-langs tree-sitter markdown-mode csharp-mode rust-mode doom-themes php-mode magit powerline yasnippet yasnippet-snippets yasnippet use-package vertico))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))
@@ -71,6 +71,11 @@
 
 ;; Word Wrap Global
 (global-visual-line-mode t)
+
+
+;; Tree-Sitter
+(global-tree-sitter-mode)
+(add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
 
 
 

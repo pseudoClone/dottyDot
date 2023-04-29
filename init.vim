@@ -12,6 +12,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'dcampos/nvim-snippy'
 Plug 'honza/vim-snippets'
 Plug 'hrsh7th/nvim-compe'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 
@@ -35,14 +36,14 @@ set hlsearch                    " Keep matches highlighted.
 set splitbelow                  " Open new windows below the current window.
 set splitright                  " Open new windows right of the current window.
 set wrapscan                    " Searches wrap around end-of-file.
-set mouse=                      " Disable Mouse
+set mouse=a                     " Disable Mouse
 set completeopt=menuone,noselect
-
+colorscheme elflord
 
 
 "https://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
 
 
 
@@ -66,6 +67,18 @@ smap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
 xmap <Tab> <Plug>(snippy-cut-text)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+"TSToggle
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+lua << EOF
+require("nvim-treesitter.configs").setup({
+    sync_install = false,
+    auto_install = true,
+    highlight = {
+        enable = true,
+    },
+})
+EOF
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 "Complete POP
