@@ -26,6 +26,14 @@
 ;; Yes or no to y or n
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+(defun my-backward-delete-whitespace ()
+  (interactive)
+  (if (looking-back "    ")
+      (backward-delete-char 4)
+    (backward-delete-char 1)))
+
+(global-set-key (kbd "DEL") 'my-backward-delete-whitespace)
+
 
 ;; No startup screen
 (setq inhibit-startup-screen t)
